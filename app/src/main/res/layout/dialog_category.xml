@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="280dp"
+    android:background="#676767"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#F3F3F3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/id_category_Edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_category_list"
+                android:backgroundTint="@color/rama"
+                android:hint="Enter id"
+                android:textColor="@color/rama"
+                android:textColorHint="@color/rama" />
+
+        <EditText
+            android:id="@+id/category_Edt"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/rama"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_category_Edt"
+            android:hint="Enter Category"
+            android:textColor="@color/rama"
+            android:textColorHint="@color/rama" />
+
+            <TextView
+                android:id="@+id/done_btn_category"
+                android:layout_width="155dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/rama"
+                android:gravity="start|bottom"
+                android:text="Done"
+                android:textColor="@color/rama"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cancel_btn_category"
+                android:layout_width="155dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/done_btn_category"
+                android:backgroundTint="@color/rama"
+                android:gravity="end|bottom"
+                android:text="Cancel"
+                android:textColor="@color/rama"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/show_category_list"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:gravity="start|center"
+                android:text="click here -> show all category list you add"
+                android:textColor="@color/rama"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

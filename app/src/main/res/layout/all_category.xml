@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:gravity="center"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/stoke_shape_imageup">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/id_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="id"
+                android:textColor="@color/rama"
+                android:textSize="15.5dp" />
+
+            <TextView
+                android:id="@+id/category_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_txt"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textColor="@color/rama"
+                android:textSize="15.5dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/update_category"
+                android:layout_width="65dp"
+                android:layout_height="22dp"
+                android:src="@drawable/update"
+                android:tint="@color/rama" />
+
+            <ImageView
+                android:id="@+id/delete_category"
+                android:layout_width="65dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/delete"
+                android:tint="#FF0000" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

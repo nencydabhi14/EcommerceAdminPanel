@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backboy"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7A000000" />
+
+    <RelativeLayout
+        android:id="@+id/contain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/email_Edt_card"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#C7D1D1"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/email_img"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:padding="13dp"
+                    android:src="@drawable/email"
+                    android:tint="@color/rama" />
+
+                <ImageView
+                    android:id="@+id/line_img"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/email_img"
+                    android:src="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/email_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/line_img"
+                    android:background="@null"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:text="nency.90.dabhi@gmail.com"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/rama"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/email_Edt_card"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#C7D1D1"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/password_img"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:padding="13dp"
+                    android:src="@drawable/password"
+                    android:tint="@color/rama" />
+
+                <ImageView
+                    android:id="@+id/line1_img"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/password_img"
+                    android:src="@drawable/line" />
+
+                <EditText
+                    android:id="@+id/password_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/line1_img"
+                    android:background="@null"
+                    android:hint="Password"
+                    android:inputType="numberPassword"
+                    android:text="nency@143"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/rama"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contain"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/strok_shape">
+
+            <RelativeLayout
+                android:id="@+id/log_In"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripple_effect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bk_color_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#94214948"
+        android:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

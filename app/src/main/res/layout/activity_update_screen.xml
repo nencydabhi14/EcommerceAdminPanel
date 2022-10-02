@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Update_Screen">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/up_contain"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D7214948" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/up_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/rama">
+
+            <ImageView
+                android:id="@+id/backUpdate"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:padding="9.5dp"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Update Product"
+                android:textColor="@color/whiteedit"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="13dp"
+                android:tint="@color/white"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/update"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/up_contain">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/p_contain"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/pname_txt_cared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Product Name"
+                    android:textColor="@color/white"
+                    android:textSize="13.7dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/pname_txt_cared"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/productname_card"
+                android:layout_width="402dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/p_contain"
+                android:backgroundTint="#ecefef"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/product_img"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:padding="13dp"
+                        android:src="@drawable/name"
+                        android:tint="@color/rama" />
+
+                    <ImageView
+                        android:id="@+id/line1_img"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/product_img"
+                        android:src="@drawable/line" />
+
+                    <EditText
+                        android:id="@+id/pname_Edt_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/line1_img"
+                        android:background="@null"
+                        android:hint="Enter your Product Name"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/rama"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:id="@+id/photo_contain"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/productname_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/offer_conatins"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:id="@+id/photo_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:text="Product Photo"
+                        android:textColor="@color/white"
+                        android:textSize="13.7dp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/photo_txt"
+                        android:visibility="gone"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@id/offer_conatins"
+                    android:background="@drawable/strok_shape"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/uplode_img_bnt"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="#EAF4F5"
+                            app:cardCornerRadius="10dp">
+
+                            <RelativeLayout
+                                android:id="@+id/upload_image_btn_Update"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Upload Image"
+                                    android:textColor="@color/rama"
+                                    android:textSize="15dp" />
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:id="@+id/product_image_Update"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/addimage" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/pprice_contain"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/photo_contain"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/pprice_txt_cared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Product Price"
+                    android:textColor="@color/white"
+                    android:textSize="13.7dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/pprice_txt_cared"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/productprice_card"
+                android:layout_width="402dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/pprice_contain"
+                android:backgroundTint="#ecefef"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/productp_img"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:padding="13dp"
+                        android:src="@drawable/ruppee"
+                        android:tint="#2F7A00" />
+
+                    <ImageView
+                        android:id="@+id/line_img"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/productp_img"
+                        android:src="@drawable/line" />
+
+                    <EditText
+                        android:id="@+id/pprice_Edt_Update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/line_img"
+                        android:background="@null"
+                        android:hint="Enter your Product Price"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#0F814D"
+                        android:textColorHint="@color/rama"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/pcategory_contain"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/productprice_card"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/pcategory_txt_cared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Product Category"
+                    android:textColor="@color/white"
+                    android:textSize="13.7dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/pcategory_txt_cared"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/product_category_card"
+                android:layout_width="402dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/pcategory_contain"
+                android:backgroundTint="#ecefef"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/productpc_img"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:padding="12dp"
+                        android:src="@drawable/catecolor" />
+
+                    <ImageView
+                        android:id="@+id/line2_img"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/productpc_img"
+                        android:src="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/spinner_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/line2_img"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/spinner_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/line2_img"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/black"
+                        android:textSize="13dp" />
+
+                    <EditText
+                        android:id="@+id/product_category_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/line2_img"
+                        android:background="@null"
+                        android:hint="Product category"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/rama"
+                        android:textSize="13dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/pdiscription_contain"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/product_category_card"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/pdiscription_txt_cared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Product Description"
+                    android:textColor="@color/white"
+                    android:textSize="13.7dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/pdiscription_txt_cared"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/product_description_card"
+                android:layout_width="402dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/pdiscription_contain"
+                android:backgroundTint="#ecefef"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/productdes_img"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:padding="13dp"
+                        android:src="@drawable/discription" />
+
+                    <ImageView
+                        android:id="@+id/line3_img"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/productdes_img"
+                        android:src="@drawable/line" />
+
+                    <EditText
+                        android:id="@+id/pdiscription_Edt_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/line3_img"
+                        android:background="@null"
+                        android:hint="Enter your Product Description"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/rama"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/poffer_contain"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/product_description_card"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/poffer_txt_cared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Product Offer"
+                    android:textColor="@color/white"
+                    android:textSize="13.7dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/poffer_txt_cared"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_grup_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/poffer_contain"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/not_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/offwhite"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="No Available Offer"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:buttonTint="@color/offwhite"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Offer Available"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </RadioGroup>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/offer_care"
+                android:layout_width="402dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/radio_grup_d"
+                android:backgroundTint="#ecefef"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/productoffer_img"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:padding="9dp"
+                        android:src="@drawable/offer" />
+
+                    <ImageView
+                        android:id="@+id/line4_img"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/productoffer_img"
+                        android:src="@drawable/line" />
+
+                    <EditText
+                        android:id="@+id/poffer_Edt_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/line4_img"
+                        android:background="@null"
+                        android:hint="Enter your Product offer"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/rama"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offer_care"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/log_In"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/strok_shape">
+
+                    <RelativeLayout
+                        android:id="@+id/done_product_Update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_effect" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Done"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
